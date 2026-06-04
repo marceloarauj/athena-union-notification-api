@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -7,17 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Notification.Domain\Notification.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Handlers\" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MassTransit" Version="9.0.0" />
     <PackageReference Include="MediatR" Version="14.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Notification.Domain\Notification.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AthenaUnionLibrary">
+      <HintPath>..\..\AthenaUnionLibrary\AthenaUnionLibrary\bin\Debug\net10.0\AthenaUnionLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Mediator">
+      <HintPath>..\..\AthenaUnionLibrary\Mediator\bin\Debug\net10.0\Mediator.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
